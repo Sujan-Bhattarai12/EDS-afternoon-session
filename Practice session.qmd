@@ -1,0 +1,21 @@
+---
+title: "Practice this one"
+author: "Sujan Bhattarai"
+format: html
+editor: visual
+---
+
+## Statistical tests
+
+```{r}
+library(GGally)
+library(skimr)
+library(palmerpenguins)
+library(tidyverse)
+```
+
+Basic Data Exploration
+
+```{r}
+View(penguins)
+```
