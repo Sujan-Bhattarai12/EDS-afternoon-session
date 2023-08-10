@@ -3,6 +3,8 @@ title: "Practice this one"
 author: "Sujan Bhattarai"
 format: html
 editor: visual
+execute: 
+  warning: FALSE
 ---
 
 ## Statistical tests
@@ -16,6 +18,53 @@ library(tidyverse)
 
 Basic Data Exploration
 
+### names: get variables names
+
 ```{r}
-View(penguins)
+names(penguins)
+```
+
+### dim: get data dimensions
+
+```{r}
+dim(penguins)
+```
+
+### head: get first n lines
+
+```{r}
+head(penguins)
+```
+
+###### summary: get basic summary statistics
+
+```{r}
+summary(penguins)
+```
+
+```{r}
+skim(penguins)
+```
+
+```{r}
+ggpairs(penguins)
+```
+
+```{r}
+```
+
+Exploratory charts
+
+Histogram
+
+```{r}
+ggplot(penguins, aes(bill_length_mm))+
+  geom_histogram(aes(fill=island))+ theme_bw()
+```
+
+```{r}
+ggplot(penguins, aes(species, bill_length_mm))+
+  geom_boxplot(aes(fill=island))+
+  geom_jitter(aes(size= bill_depth_mm), alpha=0.1S)+ 
+  theme_bw()
 ```
